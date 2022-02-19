@@ -1,0 +1,13 @@
+spring:
+  db1:
+    datasource:
+      jdbc-url: jdbc:mariadb://localhost:22221/db1?autoReconnect=true&characterEncoding=UTF-8&serverTimezone=UTC
+      username: user
+      password: 1234
+      driver-class-name: org.mariadb.jdbc.Driver
+  db2:
+    datasource:
+      jdbc-url: jdbc:mariadb://localhost:22222/db2?autoReconnect=true&characterEncoding=UTF-8&serverTimezone=UTC
+      username: user
+      password: 1234
+      driver-class-name: org.mariadb.jdbc.Driver

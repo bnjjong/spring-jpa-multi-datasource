@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  db1:
+    container_name: db1
+    image: mariadb:10.4
+    restart: always
+    ports:
+      - "22221:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=mariadb
+      - MYSQL_DATABASE=db1
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=1234
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+  db2:
+    container_name: db2
+    image: mariadb:10.4
+    restart: always
+    ports:
+      - "22222:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=mariadb
+      - MYSQL_DATABASE=db2
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=1234
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
